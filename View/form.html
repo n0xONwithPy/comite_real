@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Uma pequena aplicação para testar o Paradigma de Programação Orientada a Objetos</h1>
+    <a href="http://localhost/phpmyadmin/" target="__blank">Banco de Dados para Testes</a>
+    <form method="POST" action="../Model/upSert.php">
+        <input type="text" name="data" placeholder="Data 'AAAA/MM/DD'">
+        <input type="text" name="resumo" placeholder="Resumo">
+        <input type="text" name="qnt_votos" placeholder="Quantidade de Votos">
+        <input type="text" name="ap_rp" placeholder="AP(1) RP(0)">
+
+        <input type="submit" value="Enviar" name="submit_btn">
+    </form>
+
+    <?php
+        session_start();
+        if(isset($_SESSION['success_msg'])) {
+            echo '<div id="success_msg" class="success_msg">' . $_SESSION['success_msg']. '</div>';
+            unset($_SESSION['success_msg']);
+        }
+    ?>
+
+    <form method="POST" action="../Model/upSert.php">
+        <input type="text" name="update_key" placeholder="Resumo">
+        <input type="text" name="data" placeholder="Data 'AAAA/MM/DD'">
+        <input type="text" name="resumo" placeholder="Resumo">
+        <input type="text" name="qnt_votos" placeholder="Quantidade de Votos">
+        <input type="text" name="ap_rp" placeholder="AP(1) RP(0)">
+
+        <input type="submit" value="Atualizar" name="update_data">
+    </form>
+
+
+    <form method="POST" action="../Model/delete.php">
+        <input type="text" name="delete_key" placeholder="Informe o ID para deletar">
+
+        <input type="submit" value="Deletar" name="delete_btn">
+    </form>
+</body>
+<script src="../scripts/remove_div.js"></script>
+</html>

@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0e9e9;
+}
+
+main {
+    position: relative;
+}
+
+h1 {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    color: gray;
+}
+
+/*
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    margin-top: 10%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(70, 69, 68);
+    border-radius: 6px;
+    border: .5px solid gray;
+    box-shadow: 5px 5px 10px black;
+}
+*/
+
+.form-container {
+    display: none;
+    margin-left: 201px;
+    width: 70%;
+    height: 100%;
+}
+
+.form-container form {
+    width: 900px;
+    height: 70vh;
+    background-color: #0e3a5d;
+    animation: showIn .5s;
+    border-radius: 6px;
+}
+
+#closeForm {
+    width: 30px;
+    height: 30px;
+    background-color: #777474;
+}
+
+#closeForm:hover {
+    cursor: pointer;
+}
+
+.showOut {
+    animation: shouOut 1s;
+}
+
+input {
+    width: 240px;
+    margin-top: 8px;
+    border-radius: 6px;
+    border: .5px solid gray;
+}
+
+input[type="submit"] {
+    margin-top: 1rem;
+    width: 100px;
+}
+
+.success_msg {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -6.6rem;
+    margin-top: 4rem;
+    background-color: #0e3a5d;
+    width: 220px;
+    height: 41px;   
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    font-size: 16px;
+    color: #FFF;
+}
+
+.side-menu {
+    position: absolute;
+    flex-direction: column;
+    height: 70vh;
+    width: 200px;
+    background-color: rgb(110, 110, 109);
+    border-top-right-radius: 6px;
+}
+
+.side-menu a {
+    display: flex;
+    text-decoration: none;
+    font-size: 13px;
+    color: #FFF;
+    text-align: left !important;
+    margin-top: 3rem;
+    margin-left: 10px;
+}
+
+.side-menu a:hover {
+    color: #0e3a5d;
+}
+
+li {
+    list-style: none;
+}
+
+.logo {
+    display: flex;
+    width: 10%;
+}
+
+
+@keyframes showIn {
+    from {
+        margin-left: -100%;
+        animation-delay: 1ms;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+
+@keyframes showOut {
+    from {
+        margin-left: 0%;
+        animation-delay: 1ms;
+    }
+    to {
+        margin-left: -100%;
+    }
+}
+
+/*
+Ajustar essa media query
+*/
+@media (max-width: 300px) {
+    .side-menu {
+        width: 200px;
+    }
+
+    .form-container form {
+        background-color: aqua;
+    }
+}
