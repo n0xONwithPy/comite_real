@@ -27,7 +27,7 @@ class upSert {
             'ap_rp' => mysqli_real_escape_string($this->connection,$_POST['ap_rp'])
         ];
 
-        $submit = $_POST['submit_btn'];
+        $submit = $_POST['cad_btn'];
 
         $placeholders = implode(", ",array_fill(0 , count($data_array), "?"));
 

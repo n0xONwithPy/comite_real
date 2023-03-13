@@ -22,7 +22,12 @@
         <aside class="side-menu">
             <ul>
                 <li>
-                    <a href="#" id="formCadastro">CADASTRAR FORNECEDOR / MERCADORIA</a>
+                    <a href="#" id="formCadastro">CADASTRAR FORNECEDOR</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">CADASTRAR MERCADORIA</a>
                 </li>
             </ul>
             <ul>
@@ -42,14 +47,32 @@
             </ul>
         </aside>
         <div class="form-container">
-            <form action="">
-                <h2>Formulario de Cadastros</h2>
-                <input type="text" placeholder="CNPJ do FORNECEDOR" required>
-                <input type="text" placeholder="Nome Fantasia do FORNECEDOR" required>
-                <input type="text" placeholder="Contato do FORNECEDOR" required>
-                <input type="text" placeholder="E-mail do FORNECEDOR" required>
-                <input type="text" placeholder="Endereço do FORNECEDOR" required>
-                <input type="text" placeholder="Ramo de Atividade do FORNECEDOR" required>
+            <form method="POST" action="../Model/upSert.php">
+                <h2>Cadastro de Fornecedores</h2>
+            <h2>Dados do fornecedor</h2>
+            <div class="coluna">
+                <input name="cnpj_fornecedor" type="text" placeholder="CNPJ" required>
+                <input name="nomeFantasia_fornecedor" type="text" placeholder="Razão Social" required>
+                <input name="email_fornecedor" type="text" placeholder="E-mail" required>
+                <input name="atividade_fornecedor" type="text" placeholder="Ramo de Atividade" required>
+                <input name="nome_resp_fornecedor" type="text" placeholder="Nome do Responsavel Legal" required>
+            </div>
+            <h2>Endereço</h2>
+            <div class="coluna"> 
+                <input name="rua_fornecedor" type="text" placeholder="Nome da Rua" required>
+                <input name="numero_rua_fornecedor" type="text" placeholder="Numero" required>
+                <input name="contato_fornecedor" type="text" placeholder="Contato" required>
+                <input name="bairro_fornecedor" type="text" placeholder="Nome do Bairro" required>
+                <input name="cep_fornecedor" type="text" placeholder="CEP" required>
+                <input name="data_cadastro_fornecedor" type="date" required>
+                <i class="fa fa-info-circle" title="Data de Cadastro"></i>
+            </div>
+            <h2>Documentos do Fornecedor</h2>
+            <div class="coluna">
+                <input name="doc_fornecedor" type="file" multiple required>
+                <i class="fa fa-info-circle" title="Documentos Comprobatorios (Alvará de Funcionamento / Contrato Social)"></i>
+            </div>
+                <input name="cad_btn" type="submit" value="CADASTRAR">
             </form>
             <div id="closeForm">
                 <i class="fa fa-times" aria-hidden="true"></i>
