@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@200&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Albert Sans', sans-serif;
 }
 
 body {
@@ -47,15 +50,20 @@ form {
 .form-container form {
     width: 900px;
     height: 70vh;
-    background-color: #0e3a5d;
     animation: showIn .5s;
-    border-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: rgb(110, 110, 109);
 }
 
 #closeForm {
     width: 30px;
     height: 30px;
-    background-color: #777474;
+    background-color: #5a5959;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 #closeForm:hover {
@@ -99,7 +107,7 @@ input[type="submit"] {
     flex-direction: column;
     height: 70vh;
     width: 200px;
-    background-color: rgb(110, 110, 109);
+    background-color: #3f3f3f;
     border-top-right-radius: 6px;
 }
 
@@ -114,7 +122,7 @@ input[type="submit"] {
 }
 
 .side-menu a:hover {
-    color: #0e3a5d;
+    color: #adadad;
 }
 
 li {
@@ -140,10 +148,10 @@ li {
 @keyframes showOut {
     from {
         margin-left: 0%;
-        animation-delay: 1ms;
     }
     to {
         margin-left: -100%;
+        animation-delay: 1ms;
     }
 }
 
